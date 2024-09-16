@@ -1,0 +1,134 @@
+$card-max-width: 18rem;
+$card-border-radius: 1px;
+$padding: 0.8rem;
+$text-color-secondary: #707066;
+$bg-color-light: #dbe2f0;
+$bg-color-dark: #5876b7;
+$bg-color-gray: #dadad7;
+$color-info: #6883be;
+$font-size-small: 0.6rem;
+$font-size-medium: 0.7rem;
+$font-size-large: 0.8rem;
+$font-weight-bold: 800;
+$font-weight-normal: 500;
+$progress-bar-height: 1.5px;
+$step-indicator-size: 0.575rem;
+$border-radius-small: 0.2rem;
+$button-size: 2rem;
+
+// Styles
+.tab-card {
+  max-width: $card-max-width;
+  height: 100%;
+  border-radius: $card-border-radius;
+  padding: $padding;
+  width: 100%;
+  margin: auto;
+
+  &-header {
+    font-weight: $font-weight-bold;
+    max-width: 90%;
+    height: 2.5rem;
+    flex-shrink: 1;
+    line-height: 1.1rem;
+    font-size: $font-size-large;
+    text-wrap: wrap;
+    word-wrap: break-word;
+  }
+
+  &-type {
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+    padding: 0.4rem 0;
+  }
+
+  &-menu-btn {
+    padding: 0;
+    height: fit-content;
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  .stepper-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stepper-container {
+    position: relative;
+    width: 75%;
+    flex-shrink: 1;
+  }
+
+  .stepper {
+    gap: 0;
+    position: relative;
+  }
+
+  .step-indicator {
+    z-index: 2;
+    width: $step-indicator-size;
+    height: $step-indicator-size;
+    background-color: $bg-color-gray;
+    border-color: $bg-color-gray;
+  }
+
+  .step-active {
+    background-color: $bg-color-dark;
+    border-color: $bg-color-dark;
+  }
+
+  .progress-bar {
+    position: absolute;
+    height: $progress-bar-height;
+    width: 100%;
+    top: 0.235rem;
+    background-color: $bg-color-gray;
+    z-index: 1;
+  }
+
+  .step-info {
+    font-size: $font-size-small;
+    min-width: fit-content;
+    color: #828279;
+  }
+
+  .info-text {
+    width: fit-content;
+    border-radius: $border-radius-small;
+    color: $color-info;
+    font-size: $font-size-small;
+    padding: 0.1rem 0.3rem;
+    background-color: $bg-color-light;
+    margin: 0.5rem 0;
+  }
+
+  .follow-up-container {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .follow-up-text {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-medium;
+  }
+
+  .send-button {
+    width: $button-size;
+    height: $button-size;
+    text-align: center;
+    border-radius: $border-radius-small;
+    background-color: $bg-color-dark;
+    border: none;
+    cursor: pointer;
+  }
+
+  .send-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #ffffff;
+    margin: auto;
+  }
+}

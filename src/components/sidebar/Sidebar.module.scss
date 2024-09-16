@@ -1,0 +1,110 @@
+$sidebar-width: 15.15rem;
+$sidebar-padding: 1rem 0.75rem;
+$sidebar-bg-color: #f4f6fa;
+$sidebar-transition: left 0.3s ease-in-out;
+
+$drawer-btn-size: 1.5rem;
+$drawer-btn-offset: 2.5px;
+
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$sidebar-item-font-size: 0.7rem;
+$sidebar-item-line-height: 0.6rem;
+$sidebar-item-padding-nav: 0.45rem;
+$sidebar-item-padding-default: 0.2rem;
+$sidebar-item-margin: 0.75rem;
+$sidebar-item-active-color: #000000;
+$sidebar-item-inactive-color: #707066;
+$sidebar-item-active-bg-color: #ffffff;
+
+.sidebar {
+  &-lg-screen {
+    width: $sidebar-width;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: $sidebar-padding;
+    background-color: $sidebar-bg-color;
+    position: relative;
+    z-index: 5;
+  }
+
+  &-mobile-screen {
+    width: $sidebar-width;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: $sidebar-padding;
+    background-color: $sidebar-bg-color;
+    position: fixed;
+    left: 0;
+    z-index: 5;
+    transition: $sidebar-transition;
+  }
+
+  &-hidden {
+    left: -102%;
+  }
+
+  &-drawer-menu-btn {
+    position: absolute !important;
+    top: $drawer-btn-offset;
+    left: $drawer-btn-offset;
+    z-index: 5;
+  }
+
+  &-drawer-close-btn {
+    position: absolute;
+    top: $drawer-btn-offset;
+    right: $drawer-btn-offset;
+    z-index: 4;
+  }
+  
+  &-drawer-icon {
+    height: $drawer-btn-size;
+    width: $drawer-btn-size;
+  }
+}
+
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+  border-radius: 0.25rem;
+  font-size: $sidebar-item-font-size;
+  line-height: $sidebar-item-line-height;
+  cursor: pointer;
+
+  &-nav-padding {
+    padding-top: $sidebar-item-padding-nav;
+    padding-bottom: $sidebar-item-padding-nav;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &-default-padding {
+    padding-top: $sidebar-item-padding-default;
+    padding-bottom: $sidebar-item-padding-default;
+    margin-top: $sidebar-item-margin;
+    margin-bottom: $sidebar-item-margin;
+  }
+
+  &-active {
+    font-weight: $font-weight-bold;
+    color: $sidebar-item-active-color;
+  }
+
+  &-inactive {
+    font-weight: $font-weight-normal;
+    color: $sidebar-item-inactive-color;
+  }
+
+  &-active-background {
+    background-color: $sidebar-item-active-bg-color;
+  }
+}

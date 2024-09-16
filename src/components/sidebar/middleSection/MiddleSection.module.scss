@@ -1,0 +1,171 @@
+// Variables
+$primary-bg-color: #ebf0fa;
+$border-color: #dadad7;
+$text-color: #3c3c34;
+$secondary-text-color: #707066;
+$highlight-color: #5876b7;
+$font-size-small: 0.6rem;
+$font-size-medium: 0.7rem;
+$font-size-large: 0.75rem;
+$line-height-small: 0.1rem;
+$line-height-medium: 0.5rem;
+
+// Styles
+.middle-section {
+  height: 100%;
+  margin-top: 1.25rem;
+  border-radius: 0.25rem;
+  overflow: auto;
+
+  &-box {
+    background-color: $primary-bg-color;
+    padding: 0.4rem;
+  }
+
+  &-divider {
+    border-color: $border-color !important;
+    border-width: 1px !important;
+  }
+
+  &-accordion {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+
+    .accordian-main-item {
+      border: none;
+      text-align: center;
+    }
+
+    .accordion-main-panel {
+      padding-bottom: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    .accordion-main-item-btn {
+      text-align: left;
+      font-size: $font-size-small;
+      color: $text-color;
+      font-weight: 700;
+      margin-left: 0.5rem;
+      line-height: $line-height-small;
+      margin-top: 0.1rem;
+    }
+
+    .coming-soon-text {
+      position: absolute;
+      right: 0;
+      top: 2px;
+      border-radius: 1rem;
+      padding: 0.3rem;
+      padding-top: 0.4rem;
+      background-color: $border-color;
+      color: $text-color;
+    }
+
+    .inner-accordion {
+      padding: 0;
+      margin-right: 0;
+
+      &-item {
+        border: none;
+        color: $text-color;
+      }
+
+      .item-panel {
+        padding-bottom: 4;
+        font-size: $font-size-large;
+        text-align: left;
+      }
+    }
+
+    .workspace-inner-accordion {
+      &-item-btn {
+        width: 100%;
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+        padding-right: 0.6rem;
+
+        &-box {
+          min-width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: $font-size-medium;
+          color: $secondary-text-color;
+        }
+      }
+    }
+
+    .launchpad-inner-accordion {
+      &-item-btn {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+        padding-right: 0.6rem;
+        padding-left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.55rem;
+        cursor: default;
+
+        &-logo-box {
+          width: 1.15rem;
+          height: 1rem;
+          border-radius: 0.25rem;
+          background-color: red;
+          margin: 0;
+          padding: 0;
+        }
+
+        &-box {
+          width: 100%;
+          flex-shrink: 1;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: $font-size-medium;
+          color: $secondary-text-color;
+          line-height: $line-height-medium;
+        }
+      }
+    }
+
+    .sell-all-btn {
+      font-size: $font-size-medium;
+      font-weight: 500;
+      color: $highlight-color;
+      width: 100%;
+      text-align: center;
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
+    }
+  }
+}
+
+.pinned-inner-accordion {
+  &-item-btn {
+    width: 100%;
+    padding: 0.4rem 0.9rem 0.4rem 0;
+    font-weight: 400;
+    color: $secondary-text-color;
+
+    &-active {
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+
+  &-span {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    font-size: $font-size-medium;
+
+    &-icon {
+      height: 0.9rem;
+      width: 0.9rem;
+    }
+  }
+}

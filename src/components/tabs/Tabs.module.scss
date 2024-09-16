@@ -1,0 +1,86 @@
+// Variables
+$primary-color: #5876b7;
+$secondary-color: #707066;
+$list-border-color:rgb(226, 232, 240);
+$hover-color: #4561a3;
+$bg-color: #ffffff;
+$font-size-small: 0.7rem;
+$font-size-medium: 0.775rem;
+$font-size-large: 1.3rem;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+$border-radius: 0.25rem;
+$tab-indicator-height: 3px;
+$tab-indicator-radius: 2px;
+$btn-height: 2rem;
+
+// Styles
+.tab-list {
+  position: relative;
+  border-bottom-width: 3px;
+  border-color: $list-border-color;
+}
+
+.tab {
+  font-size: $font-size-small;
+  color: $secondary-color;
+  font-weight: $font-weight-normal;
+  align-items: flex-end;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.275rem !important;
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.tab-selected {
+  color: $primary-color;
+}
+
+.tab-indicator {
+  bottom: -1px;
+  height: $tab-indicator-height;
+  background-color: $primary-color !important;
+  border-radius: $tab-indicator-radius;
+}
+
+.create-project-btn {
+  background-color: $primary-color;
+  height: $btn-height;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: $border-radius;
+  color: $bg-color;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.create-project-icon {
+  height: 1.1rem;
+}
+
+.create-project-text {
+  margin-top: 0.175rem;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-medium;
+}
+
+.no-project-found {
+  width: 100%;
+  text-align: center;
+  margin: 3rem 0;
+
+  &-text {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $secondary-color;
+  }
+}

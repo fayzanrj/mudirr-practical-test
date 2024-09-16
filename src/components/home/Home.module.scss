@@ -1,0 +1,148 @@
+$font-size-small: 0.775rem;
+$font-size-medium: 0.8rem;
+$font-size-large: 1.4rem;
+$font-size-xlarge: 1.25rem;
+$font-size-xxlarge: 1rem;
+
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$color-dark: #3c3c34;
+$color-dark-gray: #707066;
+$color-light-gray: #a0aec0;
+$color-dark-blue: #5876b7;
+
+$padding-small: 0.75rem;
+$padding-medium: 1.25rem;
+$padding-large: 2.75rem;
+$padding-xlarge: 1.6rem;
+
+$border-radius: 6px;
+
+// Container styles
+.container {
+  position: relative;
+  text-align: left;
+  max-width: 100vw;
+  width: 100%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 100dvh;
+  overflow: auto;
+  padding: $padding-large $padding-xlarge;
+
+  &::-webkit-scrollbar {
+    width: $border-radius;
+    margin: 0 2px;
+  }
+}
+
+// Greetings styles
+.greetings {
+  &-header {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+
+  &-message {
+    font-size: $font-size-small;
+    margin: 0.3rem 0;
+    color: $color-dark-gray;
+  }
+}
+
+// Fixed footer styles
+.fixed-footer {
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  color: $color-dark;
+  width: 100%;
+  padding: $padding-small;
+  column-gap: 2.5rem;
+  row-gap: 0.5rem;
+  background-color: #ffffff;
+  z-index: 4;
+  flex-wrap: wrap;
+
+  &-btn {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    gap: 0.3rem;
+
+    &-icon {
+      height: $font-size-medium;
+      width: $font-size-medium;
+    }
+  }
+}
+
+// Status list styles
+.status-list {
+  &-item {
+    width: 8rem;
+    gap: 0.4rem;
+  }
+
+  &-icon {
+    object-fit: contain;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &-count {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-medium;
+  }
+
+  &-text {
+    font-size: 0.6rem;
+    font-weight: $font-weight-normal;
+    color: $color-dark-gray;
+  }
+}
+
+// Loader modal body styles
+.loader-modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: transparent;
+}
+
+// Server error styles
+.server-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .error-text {
+    font-size: $font-size-xlarge;
+    color: $color-dark-gray; 
+    margin-bottom: 0.5rem;
+  }
+
+  .additional-text {
+    font-size: $font-size-medium;
+    color: $color-light-gray;
+    margin-bottom: 2rem;
+  }
+
+  .reload-button {
+    background-color: $color-dark-blue;
+    color: white;
+    padding: $padding-small 1.5rem;
+    font-size: $font-size-medium;
+    border: none;
+    cursor: pointer;
+  }
+}
