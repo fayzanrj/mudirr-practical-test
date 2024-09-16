@@ -37,9 +37,9 @@ const validateProjectData = (data: ProjectProps) => {
   if (!type) {
     valid = false;
     errors.type = "Project type is required";
-  } else if (type.length <= 3 || type.length > 20) {
+  } else if (type.length < 3 || type.length > 20) {
     valid = false;
-    errors.type = "Project type must be between 4 and 20 characters";
+    errors.type = "Project type must be between 3 and 20 characters";
   }
 
   // Validating `status`
